@@ -4,9 +4,9 @@
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
-This project applies **Quantum Machine Learning (QML)** to the agricultural domain — specifically, predicting soil fertility levels based on soil nutrient composition. A **Quantum Kernel-based SVM (QSVC)** using Qiskit''s `ZZFeatureMap` is trained and evaluated against four classical ML models (Random Forest, Gradient Boosting, SVM, Logistic Regression).
+This project applies **Quantum Machine Learning (QML)** to the agricultural domain - specifically, predicting soil fertility levels based on soil nutrient composition. A **Quantum Kernel-based SVM (QSVC)** using Qiskit''s `ZZFeatureMap` is trained and evaluated against four classical ML models (Random Forest, Gradient Boosting, SVM, Logistic Regression).
 
 **Target Classes:**
 | Label | Class | Description |
@@ -17,40 +17,40 @@ This project applies **Quantum Machine Learning (QML)** to the agricultural doma
 
 ---
 
-## 🧠 Key Features
+## Key Features
 
-- **End-to-end automated pipeline** — run everything with a single `python main.py`
-- **Multi-method Feature Selection** — Correlation, Mutual Information, Random Forest Importance
-- **4-Qubit Quantum Circuit** — `ZZFeatureMap` with `reps=2`, `linear` entanglement
-- **Fidelity Quantum Kernel** — computed via Qiskit `Statevector` simulation
-- **Leakage-free preprocessing** — scalers/PCA fitted strictly on training data
-- **Classical vs. Quantum benchmarking** — side-by-side confusion matrices and F1-score comparison charts
+- **End-to-end automated pipeline** - run everything with a single `python main.py`
+- **Multi-method Feature Selection** - Correlation, Mutual Information, Random Forest Importance
+- **4-Qubit Quantum Circuit** - `ZZFeatureMap` with `reps=2`, `linear` entanglement
+- **Fidelity Quantum Kernel** - computed via Qiskit `Statevector` simulation
+- **Leakage-free preprocessing** - scalers/PCA fitted strictly on training data
+- **Classical vs. Quantum benchmarking** - side-by-side confusion matrices and F1-score comparison charts
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 soil_quantum/
 │
-├── main.py                              # Master execution script (runs all 6 stages)
-├── dataset1.csv                         # Raw soil dataset
+├── main.py                             
+├── dataset1.csv                        
 │
-├── src/                                 # Core source modules
-│   ├── eda.py                           # Stage 1 – Exploratory Data Analysis
-│   ├── preprocessing.py                 # Stage 2 – Preprocessing & PCA
-│   ├── classical_ml_baseline.py         # Stage 3 – Classical ML Baseline & Feature Selection
-│   ├── quantum_kernel_setup.py          # Stage 4 – Qiskit Feature Map & Quantum Kernel
-│   ├── qml_classifier_training.py       # Stage 5 – QSVC Training & Evaluation
-│   └── final_evaluation_and_summary.py  # Stage 6 – Classical vs. Quantum Comparison
+├── src/                                 
+│   ├── eda.py                           
+│   ├── preprocessing.py                 
+│   ├── classical_ml_baseline.py         
+│   ├── quantum_kernel_setup.py          
+│   ├── qml_classifier_training.py       
+│   └── final_evaluation_and_summary.py  
 │
 ├── notebooks/
 │   └── soil_quality_qml_colab.ipynb     # Google Colab notebook version
 │
 ├── data/
-│   ├── eda_plots/                       # Generated plots & confusion matrices
-│   ├── models/                          # Saved model artifacts (.pkl)
-│   └── preprocessed/                    # Saved NumPy arrays from preprocessing
+│   ├── eda_plots/                       
+│   ├── models/                          
+│   └── preprocessed/                    
 │
 └── .gitignore
 ```
@@ -70,7 +70,7 @@ soil_quantum/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -98,7 +98,7 @@ This will sequentially execute all 6 stages and save all plots and models to the
 
 ---
 
-## 🔬 Quantum Architecture
+## Quantum Architecture
 
 | Parameter | Value |
 |-----------|-------|
@@ -113,9 +113,9 @@ This will sequentially execute all 6 stages and save all plots and models to the
 
 ---
 
-## 📊 Results & Visualizations
+## Results & Visualizations
 
-### 📈 Exploratory Data Analysis
+### Exploratory Data Analysis
 
 **Feature Distributions**
 ![Feature Distributions](data/eda_plots/feature_distributions.png)
@@ -128,14 +128,14 @@ This will sequentially execute all 6 stages and save all plots and models to the
 
 ---
 
-### ⚛️ Quantum Kernel Matrix
+### Quantum Kernel Matrix
 
 **Quantum Fidelity Kernel Heatmap** (Train Set)
 ![Quantum Kernel Matrix](data/eda_plots/quantum_kernel_matrix_heatmap.png)
 
 ---
 
-### 🏆 Model Performance Comparison (Test Set — 20%)
+### Model Performance Comparison (Test Set — 20%)
 
 | Model | Accuracy | Macro F1 | Weighted F1 |
 |-------|----------|----------|-------------|
@@ -152,25 +152,25 @@ This will sequentially execute all 6 stages and save all plots and models to the
 
 ---
 
-### 🔷 Classical Model Confusion Matrices
+### Classical Model Confusion Matrices
 
 ![Classical Confusion Matrices](data/eda_plots/classical_confusion_matrices.png)
 
 ---
 
-### 🟣 Quantum SVC (QSVC) Confusion Matrix
+### Quantum SVC (QSVC) Confusion Matrix
 
 ![QSVC Confusion Matrix](data/eda_plots/qml_qsvc_confusion_matrix.png)
 
 ---
 
-### ⚡ Classical vs. Quantum — Side-by-Side Comparison
+### Classical vs. Quantum — Side-by-Side Comparison
 
 ![Classical vs Quantum Confusion Matrix](data/eda_plots/confusion_matrix_classical_vs_qml.png)
 
 ---
 
-## 🧪 Dataset
+## Dataset
 
 The dataset (`dataset1.csv`) contains soil samples with the following features:
 
@@ -189,13 +189,13 @@ Top 4 features selected for QML via composite ranking of Correlation + Mutual In
 
 ---
 
-## 📓 Colab Notebook
+## Colab Notebook
 
 An interactive Google Colab notebook is available in `notebooks/soil_quality_qml_colab.ipynb` for running the pipeline in a cloud environment without local setup.
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **[Qiskit](https://qiskit.org/)** — Quantum circuit construction & statevector simulation
 - **[Qiskit Machine Learning](https://github.com/qiskit-community/qiskit-machine-learning)** — Quantum kernel utilities
@@ -205,7 +205,7 @@ An interactive Google Colab notebook is available in `notebooks/soil_quality_qml
 
 ---
 
-## 📖 References
+## References
 
 - Havlíček et al., *Supervised learning with quantum-enhanced feature spaces*, Nature 2019
 - Schuld & Killoran, *Quantum Machine Learning in Feature Hilbert Spaces*, PRL 2019
@@ -216,7 +216,6 @@ An interactive Google Colab notebook is available in `notebooks/soil_quality_qml
 ## 👤 Author
 
 **Mahak Khetan**  
-GitHub: [@mahakkhetan31](https://github.com/mahakkhetan31)
 
 ---
 
