@@ -57,7 +57,7 @@ soil_quantum/
 
 ---
 
-## ⚙️ Pipeline Stages
+## Pipeline Stages
 
 | Stage | Script | Description |
 |-------|--------|-------------|
@@ -213,12 +213,12 @@ An interactive Google Colab notebook is available in `notebooks/soil_quality_qml
 
 ---
 
-## 👤 Author
+## Author
 
 **Mahak Khetan**  
 
 ---
 
-## 📄 License
+## License
 
 This project is open-source and available under the [MIT License](LICENSE).
